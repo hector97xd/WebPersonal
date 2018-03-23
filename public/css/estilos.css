@@ -1,0 +1,140 @@
+.foto {
+    width: 175px;
+    height: 175px;
+    margin-left: 20px;
+    border-radius: 90%;
+    border: solid;
+    border-color: #26a69a teal;
+}
+
+.perfil {
+    border-radius: 90%;
+    border: solid;
+    border-color: #26a69a teal;
+}
+.perfil2 {
+    width: 170px;
+    height: 242px;
+    border-radius: 90%;
+    border: solid;
+    border-color: #26a69a teal;
+}
+
+
+.fondo {
+    background-color: #0B0C0D;
+}
+
+.nombre {
+    size: 50px;
+}
+
+.logos {
+    margin-left: 70px;
+}
+
+#linkedin {
+    background: url('../fonts/linkedin.jpg') no-repeat;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}
+
+#linkedin:hover {
+    background: url("../fonts/linkedinAzul.jpg") no-repeat;
+}
+
+#github {
+    background: url('../fonts/github2.jpg') no-repeat;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    margin-top: -70px;
+    margin-left: 80px;
+}
+
+#github:hover {
+    background: url("../fonts/githubazul.jpg") no-repeat;
+}
+
+#menu {
+    padding: 0%;
+}
+
+header,
+main,
+footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+    footer {
+        padding-left: 0;
+    }
+}
+
+.nav {
+    position: absolute;
+    height: 70PX;
+    width: 100%;
+    background-color: #0B0C0D;
+}
+
+p {
+    text-align: justify;
+}
+
+.contenedor {
+    margin-left: 15%;
+}
+
+header {
+    opacity: 0.5;
+    box-shadow: 1px 1px 5px #000;
+    height: 65px;
+    position: fixed;
+    width: 100%;
+}
+
+.menu {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#frase {
+    background-color: darkgreen;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url('../fonts/material.jpg');
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+#acerca {
+    height: 100%;
+    padding-top: 7%;
+}
+
+;
