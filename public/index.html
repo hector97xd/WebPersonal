@@ -58,42 +58,50 @@
 
         </div>
     </div>
-    <ul id="slide-out" class="sidenav #212121 grey darken-4">
+    <ul id="slide-out" class="sidenav sidenav-close #212121 grey darken-4">
         <li>
             <div class="user-view">
+                <div id="sideFotoText">
+                    <a href="#user">
+                        <img class="foto z-depth-5" src="fonts/FOTO.png">
+                    </a>
+                </div>
+                <h5 class="text-primary-color" style="margin-left: 30px;">Héctor Guevara</h5>
 
-                <a href="#user">
-                    <img class="foto" src="fonts/FOTO.png">
-                </a>
-                <a href="#name">
-                    <span class="text-primary-color flow-text" style="margin-left: 25px;">Héctor Guevara</span>
-                </a>
+
             </div>
         </li>
+        <br>
         <div class="logos">
             <div id="linkedin">
                 <a href="#!">
 
                 </a>
             </div>
+            <div id="github">
+                <a href="#!">
+
+                </a>
+            </div>
         </div>
+        <br>
         <li>
-            <a class="waves-effect waves-light btn-large" href="#home">
+            <a class="waves-effect waves-light btn-large sidenav-close" href="#home">
                 <i class="material-icons left">home</i>Inicio</a>
 
         </li>
         <li>
-            <a class="waves-effect waves-light btn-large" href="#quien">
+            <a class="waves-effect waves-light btn-large sidenav-close" href="#quien">
                 <i class="material-icons left">face</i>Acerca de mi</a>
 
         </li>
         <li>
-            <a class="waves-effect waves-light btn-large" href="#experiencia">
+            <a class="waves-effect waves-light btn-large sidenav-close" href="#experiencia">
                 <i class="material-icons left">publish</i>Experiencia</a>
 
         </li>
         <li>
-            <a class="waves-effect waves-light btn-large">
+            <a class="waves-effect waves-light btn-large sidenav-close" href="#contactar">
                 <i class="material-icons left">contacts</i>Contactar</a>
 
         </li>
@@ -105,18 +113,18 @@
     <section id="acerca" class="#212121 grey darken-4">
         <div class="row">
             <div class="col l11 offset-l1">
-                <div class="row">             
+                <div class="row">
                     <div class="container">
-                        <div class="card-panel teal">
+                        <div class="card-panel #a7ffeb teal accent-1">
                             <div class="center-align">
-                                <h3 align="center" style="color:black">Acerca de mi</h3>
+                                <h3 align="center" style="color:#004d40;">ACERCA DE MI</h3>
                                 <center>
                                     <img src="fonts/code.png" width="150" height="150">
                                 </center>
-                                <p class="flow-text" style="color:aliceblue">
+                                <p class="flow-text" style="color:black">
                                     Soy egresado en Informatica de ITCA-FEPADE.Me gusta resolver problemas y adquirir nuevos conocimientos para estar actualizado
                                     y dar lo mejor de mi a las necesidades de las empresas.Soy bueno trabajando en equipo
-                                    y resposable a la hora de presentar mi trabajo.
+                                    y respoNsable a la hora de presentar mi trabajo.
 
                                 </p>
                             </div>
@@ -146,31 +154,68 @@
                                     y resposable a la hora de presentar mi trabajo.
 
                                 </p>
+
                             </div>
                         </div>
                     </div>
                 </div>
     </section>
-    <section id="acerca" class="#f1f8e9 light-green lighten-5">
+    <a name="contactar"></a>
+    <section id="contactar" class="#009688 teal">
         <div class="row">
             <div class="col l11 offset-l1">
                 <div class="row">
                     <div class="white">
-                        <div class="container">
-                            <div class="col s12 m12 l12">
-                                <h4 align="center">Proyectos</h4>
-                            </div>
-                            <div class="col s12">
-                                <div class="container">
-                                    <p class="flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic minus perspiciatis cupiditate
-                                        deleniti doloremque id! Ratione amet, labore mollitia debitis optio iste itaque rerum
-                                        laboriosam officia beatae nostrum ad nulla!</p>
-                                </div>
-                            </div>
+                        <div class="container" id="app">
+                            <form action="" @submit.prevent="enviar">
+                                <div class="col s12">
+                                    <div class="card-panel">
+                                        <div class="col s12 m12 l12">
+                                            <h4 align="center">CONTACTAR</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <i class="material-icons prefix">account_circle</i>
+                                                <input id="icon_prefix" type="text" class="validate" v-model="nombre">
+                                                <label for="icon_prefix">Nombre</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <i class="material-icons prefix">account_circle</i>
+                                                <input id="email" type="email" class="validate" v-model="email">
+                                                <label for="email">Email</label>
+                                                <span class="helper-text" data-error="Error" data-success="Hecho"></span>
+                                            </div>
 
+                                            <div class="col s12">
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <i class="material-icons prefix">textsms</i>
+                                                        <textarea id="textarea" class="materialize-textarea" v-model="msj"></textarea>
+                                                        <label for="textarea">Comentario</label>
+
+
+                                                    </div>
+                                                    <div class="col s12 " align="right">
+                                                        <button class="btn waves-effect waves-light" type="submit" name="action" v-if="validar">Enviar
+                                                            <i class="material-icons right">send</i>
+                                                        </button>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="col s12">
+                                                        <div v-show="alert" class="card-panel teal flow-text white-text" align="center">Gracias será un gusto atenderle</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
     </section>
 
 
@@ -180,7 +225,10 @@
 
 
     <script src="js/materialize.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/main.js"></script>
+
+
 
 </body>
 
