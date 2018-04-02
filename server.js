@@ -1,8 +1,7 @@
-'use strict';
+
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
-var nodemailer = require('nodemailer');
 const path = require('path');
 
 app.set('port' , process.env.PORT || 3000);
